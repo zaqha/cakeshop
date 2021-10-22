@@ -2,7 +2,7 @@
 $goods=$Goods->find($_GET['id']);
 $big=$Type->find($goods['big'])['name'];
 $mid=$Type->find($goods['mid'])['name'];
-?> 
+?>
 <h2 class="ct"><?=$goods['name'];?></h2>
 <table class="all">
     <tr class="pp">

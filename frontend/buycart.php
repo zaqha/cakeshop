@@ -3,16 +3,22 @@
 if(isset($_GET['id'])){
     $_SESSION['cart'][$_GET['id']]=$_GET['qt'];
 }
+
 if(!isset($_SESSION['mem'])){
     to("?do=login");
     exit();
 }
+
 echo "<h2 class='ct'>".$_SESSION['mem']."的購物車</h2>";
+
+
 if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])){
     echo "<div class='ct'>購物車中尚無商品</div>";
 }else{
 
+
 ?>
+
 
 <table class="all ct">
     <tr class="tt">
@@ -25,8 +31,6 @@ if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])){
         <td>刪除</td>
     </tr>
     <?php 
-    print_r($_SESSION['cart']) ;
-    print_r([$_GET['id']]);
 
     foreach($_SESSION['cart'] as $id => $qt){
         $goods=$Goods->find($id);
@@ -56,6 +60,7 @@ if(!isset($_SESSION['cart']) || empty($_SESSION['cart'])){
 $(".del").on("click",function(){
     let id=$(this).data('id');
     $.post("api/cart.php",{id},()=>{
+
         //location.reload();
         //location.href='index.php?do=buycart';
         $("#g"+id).remove()
@@ -64,6 +69,7 @@ $(".del").on("click",function(){
 })
 
 </script>
+
 <?php
 }
 ?>

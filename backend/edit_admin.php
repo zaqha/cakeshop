@@ -1,6 +1,5 @@
 <?php 
 $admin=$Admin->find($_GET['id']);
-echo $admin['pr'];
 $pr=unserialize($admin['pr']);
 
 ?>

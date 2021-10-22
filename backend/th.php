@@ -16,7 +16,7 @@
         </select>
         <input type="text" name="name">
         <input type="submit" value="新增"></form>
-</div>  
+</div>
 <div class="type-list">
 <table class=all>
 <?php

@@ -5,7 +5,7 @@ if(isset($_SESSION['admin'])){
     $user=$Admin->find(['acc'=>$_SESSION['admin']]);
     $mpr=unserialize($user['pr']);
 }else{
-    echo "請先登入";
+    echo "非法登入";
     exit();
 }
 
@@ -18,7 +18,7 @@ if(isset($_SESSION['admin'])){
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>cake shop</title>
+    <title>┌精品電子商務網站」</title>
     <link href="./css/css.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/js.js"></script>
@@ -27,12 +27,6 @@ if(isset($_SESSION['admin'])){
 <body>
     <iframe name="back" style="display:none;"></iframe>
     <div id="main">
-        <div id="top">
-            <a href="index.php">
-                <img src="./icon/0416.jpg">
-            </a>
-            <img src="./icon/0417.jpg">
-        </div>
         <div id="left" class="ct">
             <div style="min-height:400px;">
                 <a href="?do=admin">管理權限設置</a>
@@ -45,16 +39,20 @@ if(isset($_SESSION['admin'])){
             </div>
         </div>
         <div id="right">
-        <?php
-                $do=$_GET['do']??'admin';
-                $file='backend/'.$do.".php";
-                if(file_exists($file)){
-                        include $file;
-                }else{
-                        include 'backend/admin.php';
-                }
+
+            <?php
+        $do=$_GET['do']??'admin';
+        $file='backend/'.$do.".php";
+        if(file_exists($file)){
+                include $file;
+        }else{
+                include 'backend/admin.php';
+        }
+
         ?>
         </div>
+        <div id="bottom" style="line-height:70px; color:#FFF; background:url(icon/bot.png);" class="ct">
+        <?=$Bot->find(1)['bot'];?> </div>
     </div>
 
 </body>
