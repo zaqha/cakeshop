@@ -39,6 +39,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#contact"><i class="fas fa-fw fa-envelope me-2"></i>預約試吃</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href=""><i class="fas fa-fw "></i>會員登入</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="frontend/admin.php"><i class="fas fa-f"></i>管理登入</a>
+        </li>
 
       </ul>
     </div>
