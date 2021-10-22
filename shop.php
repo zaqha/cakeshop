@@ -307,16 +307,9 @@
   <!-- logo -->
   <article class="container-fluid bg-light py-5 text-center">
     <div class="d-flex justify-content-center align-items-center flex-wrap">
-      <a href="https://www.facebook.com/tsvts/" target="_blank" class="link-secondary m-3 p-3 border rounded">
+      <a href="https://www.facebook.com/" target="_blank" class="link-secondary m-3 p-3 border rounded">
         <i class="fab fa-facebook-square fa-3x"></i><br>
         cake shop
-      </a>
-
-      <a href="https://tkyhkm.wda.gov.tw/Default.aspx" target="_blank">
-      <img src="https://ws.wda.gov.tw/001/Upload/308/sites/pagebackimage/366d4144-bdac-4a20-a1f2-b0846004efc0.png" alt="">
-      </a>
-      <a href="https://www.taiwanjobs.gov.tw/home109/index.aspx" target="_blank">
-        <img src="https://www.taiwanjobs.gov.tw/home109/images/intro-logo.png" alt="">
       </a>
     </div>
   </article>
